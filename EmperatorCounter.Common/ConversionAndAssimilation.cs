@@ -276,13 +276,13 @@ namespace ImperatorCounter.Common
                 _assimilationLawPercantage = 0.3;
             }
         }
-        public void AssimilationOmens(int assimilationOmens)
+        public void AssimilationOmens(string assimilationOmens)
         {
-            if (assimilationOmens == 1)
+            if (assimilationOmens == "No effecting omens")
                 _assimilationOmens = 0;
-            else if (assimilationOmens == 2)
+            else if (assimilationOmens == "Cybele or Belisama without holy site")
                 _assimilationOmens = 0.1;
-            else if (assimilationOmens == 3)
+            else if (assimilationOmens == "Cybele or Belisama with holy site")
                 _assimilationOmens = 0.125;
         }
         public void ConversionOmens(string conversionOmens)
@@ -313,59 +313,58 @@ namespace ImperatorCounter.Common
                 _religousGod = 0.0625;
             }
         }
-        public void Heritages(int heritage)
+        public void Heritages(string heritage)
         {
-            if (heritage == 1) //No effecting heritage
+            if (heritage == "No effecting heritage") //No effecting heritage
             { 
                 _heritagePercantageAssimilation = 0;
                 _heritagePercantageConversion = 0; 
             }
-            else if (heritage == 2) //Kalingan Heritage
+            else if (heritage == "Kalingan Heritage") //Kalingan Heritage
             {
                 _heritagePercantageAssimilation = 0.1;
                 _heritagePercantageConversion = 0;
             }
-            else if (heritage == 3) //Decapolian Heritage
+            else if (heritage == "Decapolian Heritage") //Decapolian Heritage
             {
                 _heritagePercantageAssimilation = 0.1;
                 _heritagePercantageConversion = 0;
             }
-            else if (heritage == 4) //Nabatean Heritage
+            else if (heritage == "Nabatean Heritage") //Nabatean Heritage
             {
                 _heritagePercantageAssimilation = 0;
                 _heritagePercantageConversion = -0.05;
             }
-            else if (heritage == 5) //Judean Heritage
+            else if (heritage == "Judean Heritage") //Judean Heritage
             {
                 _heritagePercantageAssimilation = 0;
                 _heritagePercantageConversion = -0.25;
             }
-            else if (heritage == 6) //Heritage of Byblos
+            else if (heritage == "Heritage of Byblos") //Heritage of Byblos
             {
                 _heritagePercantageAssimilation = -0.05;
                 _heritagePercantageConversion = 0;
             }
-            else if (heritage == 7) //Bosporan Heritage
+            else if (heritage == "Bosporan Heritage") //Bosporan Heritage
             {
                 _heritagePercantageAssimilation = -0.1;
                 _heritagePercantageConversion = 0;
             }
-            else if (heritage == 8) //Heritage of Ptolemaios
+            else if (heritage == "Heritage of Ptolemaios") //Heritage of Ptolemaios
             {
                 _heritagePercantageAssimilation = -0.15;
                 _heritagePercantageConversion = 0;
             }
-            else if (heritage == 9) //Heritage of Seleukos
+            else if (heritage == "Heritage of Seleukos") //Heritage of Seleukos
             {
                 _heritagePercantageAssimilation = -0.15;
                 _heritagePercantageConversion = 0;
             }
-            else if (heritage == 10) //Hellenistic Heritage
+            else if (heritage == "Hellenistic Heritage") //Hellenistic Heritage
             {
                 _heritagePercantageAssimilation = -0.15;
                 _heritagePercantageConversion = 0;
             }
-
         }
         public void RoadNetwork(int roads)
         {

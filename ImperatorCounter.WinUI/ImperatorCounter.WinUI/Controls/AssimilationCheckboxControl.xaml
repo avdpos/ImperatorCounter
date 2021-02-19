@@ -23,12 +23,12 @@
                 <ComboBoxItem Content="Melqart, Artume or Krishna without holy site" />
                 <ComboBoxItem Content="Melqart, Artume or Krishna with holy site" />
             </ComboBox>
-            <ComboBox Header="Asimilation Omens" SelectedValue="{}">
+            <ComboBox Header="Asimilation Omens" SelectedValue="{x:Bind ViewModel.settings.GodsAndOmens.AssimilationOmens}">
                 <ComboBoxItem Content="No effecting omens" IsSelected="True" />
                 <ComboBoxItem Content="Cybele or Belisama without holy site" />
                 <ComboBoxItem Content="Cybele or Belisama with holy site" />
             </ComboBox>
-            <ComboBox Header="Heritage">
+            <ComboBox Header="Heritage" SelectedValue="{x:Bind ViewModel.settings.LawsHeritage.Heritage}">
                 <ComboBoxItem Content="No effecting heritage" IsSelected="True" />
                 <ComboBoxItem Content="Kalingan Heritage" />
                 <ComboBoxItem Content="Decapolian Heritage" />

@@ -12,7 +12,7 @@ namespace ImperatorCounter.Common
             IsJewish = false;
             IsBuddhist = false;
             AssimilationLaws = "No law";
-
+            Heritage = "No effecting heritage";
         }
         public string ReligousLaws ;
         public string AssimilationLaws;
@@ -20,6 +20,6 @@ namespace ImperatorCounter.Common
         public bool IsJewish;
         public bool IsBuddhist;
 
-        }
+        
     }
 }
