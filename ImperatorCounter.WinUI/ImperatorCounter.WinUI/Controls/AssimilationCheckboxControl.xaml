@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="ImperatorCounter.WinUI.Controls.AssimilationCheckboxControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ImperatorCounter.WinUI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel Margin="10">
+            <CheckBox Content="Cultural Administration (Civic tech 11)" IsChecked="{x:Bind ViewModel.settings.Tech.CulturalAdministration}"/>
+            <CheckBox Content="National Capital" IsChecked="{x:Bind ViewModel.settings.Buildings.IsCapital}"/>
+            <TextBox Header="Number of Provincial Legations in Province" Text="0" />
+            <ComboBox Header="Laws" SelectedValue="{x:Bind ViewModel.settings.LawsHeritage.AssimilationLaws}">
+                <ComboBoxItem Content="No law" IsSelected="True" />
+                <ComboBoxItem Content="Cultural Dissemination (Monarchy)" />
+                <ComboBoxItem Content="Oral Tradition (Tribal)" />
+            </ComboBox>
+            <CheckBox Content="Statereligion is Jewish" IsChecked="{x:Bind ViewModel.settings.LawsHeritage.IsJewish}"/>
+            <ComboBox Header="Conversion effecting Dieties" SelectedValue="{x:Bind ViewModel.settings.GodsAndOmens.ConversionOmens}">
+                <ComboBoxItem Content="No effecting dietis" IsSelected="True" />
+                <ComboBoxItem Content="Melqart, Artume or Krishna without holy site" />
+                <ComboBoxItem Content="Melqart, Artume or Krishna with holy site" />
+            </ComboBox>
+            <ComboBox Header="Asimilation Omens" SelectedValue="{}">
+                <ComboBoxItem Content="No effecting omens" IsSelected="True" />
+                <ComboBoxItem Content="Cybele or Belisama without holy site" />
+                <ComboBoxItem Content="Cybele or Belisama with holy site" />
+            </ComboBox>
+            <ComboBox Header="Heritage">
+                <ComboBoxItem Content="No effecting heritage" IsSelected="True" />
+                <ComboBoxItem Content="Kalingan Heritage" />
+                <ComboBoxItem Content="Decapolian Heritage" />
+                <ComboBoxItem Content="Nabatean Heritage" />
+                <ComboBoxItem Content="Judean Heritage" />
+                <ComboBoxItem Content="Heritage of Byblos" />
+                <ComboBoxItem Content="Bosporan Heritage" />
+                <ComboBoxItem Content="Heritage of Ptolemaios" />
+                <ComboBoxItem Content="Heritage of Seleukos" />
+                <ComboBoxItem Content="Hellenistic Heritage" />
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

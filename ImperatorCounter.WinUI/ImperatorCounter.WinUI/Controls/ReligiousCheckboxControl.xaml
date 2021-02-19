@@ -1,0 +1,50 @@
+﻿<UserControl
+    x:Class="ImperatorCounter.WinUI.Controls.ReligiousCheckboxControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ImperatorCounter.WinUI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel>
+            <CheckBox Content="Grand Temples (Religious tech 1)" IsChecked="{x:Bind ViewModel.settings.Tech.GrandTemple}" />
+            <CheckBox Content="Religious Assimilation (Civic tech 10)" IsChecked="{x:Bind ViewModel.settings.Tech.ReligousAssimilation}"/>
+            <CheckBox Content="National Capital" IsChecked="{x:Bind ViewModel.settings.Buildings.IsCapital}"/>
+            <TextBox Header="Outgoing roads from territory" Text="{x:Bind ViewModel.settings.Buildings.RoadNetwork}" />
+            <ComboBox Header=" Religous laws" SelectedValue="{x:Bind ViewModel.settings.LawsHeritage.SetReligousLaws}">
+                <ComboBoxItem Content="No religious law" IsSelected="True" />
+                <ComboBoxItem Content="Religous conversion (Monarchy)" />
+                <ComboBoxItem Content="Deny Priests in Senate (Republic)" />
+                <ComboBoxItem Content="Lex Aelia et Fufia (Roman Republic)" />
+            </ComboBox>
+            <CheckBox Content="Is Buddhist" IsChecked="{x:Bind ViewModel.settings.LawsHeritage.IsBuddhist}"/>
+            <ComboBox Header="Defied rulers in Pantheon" SelectedValue="{x:Bind ViewModel.settings.GodsAndOmens.DefiedRulersInPantheon, Mode=TwoWay}">
+                <ComboBoxItem Content="0" IsSelected="True" />
+                <ComboBoxItem Content="1" />
+                <ComboBoxItem Content="2" />
+                <ComboBoxItem Content="3" />
+                <ComboBoxItem Content="4" />
+            </ComboBox>
+            <ComboBox Header="Conversion effecting gods" SelectedValue="{x:Bind ViewModel.settings.GodsAndOmens.ReligousDietis}">
+                <ComboBoxItem Content="0" IsSelected="True" />
+                <ComboBoxItem Content="Zeus Ammon, Esther or Saulaia without holy site" />
+                <ComboBoxItem Content="Zeus Ammon, Esther or Saulaia with holy site" />
+            </ComboBox>
+            <ComboBox Header="Mismatching Dietis in Pantheon" SelectedValue="{x:Bind ViewModel.settings.GodsAndOmens.MissMatchingDietis}">
+                <ComboBoxItem Content="0" IsSelected="True" />
+                <ComboBoxItem Content="1" />
+                <ComboBoxItem Content="2" />
+                <ComboBoxItem Content="3" />
+                <ComboBoxItem Content="4" />
+            </ComboBox>
+            <ComboBox Header="Conversion Omen" SelectedValue="{x:Bind ViewModel.settings.GodsAndOmens.ConversionOmens}">
+                <ComboBoxItem Content="None" IsSelected="True" />
+                <ComboBoxItem Content="Trapusa and Bahalika, Intrabus, Eacus or Zoroaster without holy site" />
+                <ComboBoxItem Content="Trapusa and Bahalika, Intrabus, Eacus or Zoroaster with holy site" />
+            </ComboBox>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

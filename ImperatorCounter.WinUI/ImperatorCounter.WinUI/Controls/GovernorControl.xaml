@@ -1,0 +1,24 @@
+﻿<UserControl
+    x:Class="ImperatorCounter.WinUI.Controls.GovernorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ImperatorCounter.WinUI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Border>
+            <StackPanel>
+                <TextBox Header="Governor Finesse" Text="{x:Bind ViewModel.settings.Governor.SetFinesse}"/>
+                <ComboBox Header="Governor Policy" SelectedValue="{x:Bind ViewModel.settings.Governor.SetPolicy}">
+                    <ComboBoxItem Content="Assimilation"/>
+                    <ComboBoxItem Content="Conversion" />
+                    <ComboBoxItem Content="Assimilation until majority, then conversion"/>
+                    <ComboBoxItem Content="Conversion until majority, then conversion" />
+                    <ComboBoxItem Content="no effecting policy" IsSelected="True"/>
+                </ComboBox>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
